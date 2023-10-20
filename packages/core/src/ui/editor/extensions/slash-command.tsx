@@ -37,6 +37,7 @@ interface CommandItemProps {
   title: string;
   description: string;
   icon: ReactNode;
+  ai: string;
 }
 
 interface CommandProps {
@@ -81,6 +82,13 @@ const getSuggestionItems = ({ query }: { query: string }) => {
       description: "Use AI to expand your thoughts.",
       searchTerms: ["gpt"],
       icon: <Magic className="novel-w-7" />,
+    },
+    {
+      title: "Ask a question AI",
+      description: "Use AI to answer your question.",
+      ai: "AIQuestionAI",
+      searchTerms: ["gpt"],
+      icon: <Magic className="w-7" />,
     },
     {
       title: "Send Feedback",
